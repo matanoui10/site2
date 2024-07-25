@@ -50,32 +50,6 @@ HOME = Image.open("D:\Website\Images\HOME.png")
 # Path to your image file
 image_path = "D:\Website\Images\1280px-HD_transparent_picture.png"  # Adjust this path as needed
 
-st.markdown(
-    f"""
-    <style>
-    .stApp {{
-        background: url('file:///{"D:\Website\Images\360_F_376747823_L8il80K6c2CM1lnPYJhhJZQNl6ynX1yj.jpg"}');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }}
-    .menu-container {{
-        background-color: rgba(0, 0, 0, 0) !important;
-    }}
-    .nav-link {{
-        background-color: rgba(0, 0, 0, 0) !important;
-        color: #00BF63 !important;
-    }}
-    .nav-link:hover {{
-        background-color: rgba(255, 255, 255, 0.5) !important;
-    }}
-    .nav-link-selected {{
-        background-color: rgba(0, 0, 0, 0) !important;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 selected = option_menu(
     menu_title=None,
