@@ -50,7 +50,6 @@ HOME = Image.open("D:\Website\Images\HOME.png")
 # Path to your image file
 image_path = "D:\Website\Images\1280px-HD_transparent_picture.png"  # Adjust this path as needed
 
-
 selected = option_menu(
     menu_title=None,
     options=["Acasa", "Despre", "Planuri", "Contact"],
