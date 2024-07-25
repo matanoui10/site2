@@ -1,16 +1,19 @@
+[ui]
+hideTopBar = true
+
 [theme]
 
 # Primary accent for interactive elements
-primaryColor = '#7792E3'
+primaryColor = '#02081C'
 
 # Background color for the main content area
-backgroundColor = '#273346'
+backgroundColor = 'rgba(0, 0, 0, 0)'
 
 # Background color for sidebar and most interactive widgets
-secondaryBackgroundColor = '#B9F1C0'
+secondaryBackgroundColor = '#02081C'
 
 # Color used for almost all text
-textColor = '#FFFFFF'
+textColor = '#00BF63'
 
 # Font family for all text in the app, except code blocks
 # Accepted values (serif | sans serif | monospace) 

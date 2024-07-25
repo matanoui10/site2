@@ -1,14 +1,13 @@
-/* CSS Snippet from W3schools: https://www.w3schools.com/howto/howto_css_contact_form.asp */
-/* Style inputs with type="text", select elements and textareas */
-input[type=message], input[type=email], input[type=text], textarea {
+/* Style inputs with type="email", type="text", select elements and textareas */
+input[type=email], input[type=text], textarea {
   width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
+  padding: 12px; /* Some padding */
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
@@ -26,8 +25,50 @@ button[type=submit]:hover {
   background-color: #45a049;
 }
 
-
 /* Hide Streamlit Branding */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+header { visibility: hidden; }
+
+/* Custom navigation bar styling */
+.css-1d391kg, .css-1outpf7 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0); /* Fully transparent */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light border at the bottom */
+  padding: 10px 0;
+}
+
+/* Ensure content is pushed down below the fixed nav bar */
+.st-b2 {
+  margin-top: 70px; /* Adjust this value if necessary */
+}
+
+/* Additional specificity for dropdown menus */
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light grey background with 10% opacity on hover */
+}
+
+.dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+body {
+  background-image: url("D:\Website\Images\HOME.png");
+  background-size: cover;
+  background-position: center;
+}
