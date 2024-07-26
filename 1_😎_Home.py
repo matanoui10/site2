@@ -12,12 +12,12 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-# Set the background image
+#-------------Set_the_background_image-------------
 with st.container():
     background_image = """
     <style>
     [data-testid="stAppViewContainer"] > .main {
-        background-image: url("https://i.imghippo.com/files/tJGfA1721922579.png");
+        background-image: url("https://i.imghippo.com/files/n0R1m1721995649.png");
         background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
         background-position: center;  
         background-repeat: no-repeat;
@@ -33,22 +33,22 @@ def load_lottieurl(url):
         return None
     return r.json()
 
-# Load CSS
+#-------------Load_CSS-------------
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 local_css("Style/style.css")
 
-# ASSETS
+#-------------ASSETS-------------
 
 animatie = load_lottieurl("https://lottie.host/73f18945-54b2-4af0-9ba6-9c34eac4abd8/yqkf5pirZN.json")
 imagine = Image.open("Images/123.jpg")
-# NAVIGATION
+HOME = Image.open("D:\Website\Images\HOME.png")
 
-# Path to your image file
-image_path = "D:\Website\Images\1280px-HD_transparent_picture.png"  # Adjust this path as needed
+#-------------NAVIGATION-------------
 
+image_path = "D:\Website\Images\1280px-HD_transparent_picture.png"
 selected = option_menu(
     menu_title=None,
     options=["Acasa", "Despre", "Planuri", "Contact"],
@@ -60,7 +60,7 @@ selected = option_menu(
         "icon": {"color": "#00BF63", "font-size": "25px"},
         "nav-link": {
             "font-size": "20px",
-            "color": "#00BF63",
+            "color": "white",
             "text-align": "middle",
             "margin": "0px",
             "--hover-color": "rgba(255, 255, 255, 0.5)",
@@ -75,32 +75,118 @@ reduce_header_height_style = """
 """
 st.markdown(reduce_header_height_style, unsafe_allow_html=True)
 
-# HEADER
-with st.container():
-    left_colum, right_colum = st.columns(2)
-    with left_colum:
-        st.header("TESTE GRILE")
-    with right_colum:
-        st.subheader("ALL IN ONE PLACE")
+#-------------HOME-------------
 
-# MAIN CONTENT
+st.markdown("""
+    <style>
+    @font-face {
+        font-family: 'Ja Jayagiri Sans';
+        src: url('https://path-to-your-font/JaJayagiriSans.woff2') format('woff2');
+    }
+    .left-font {
+        font-family: 'Ja Jayagiri Sans', sans-serif;
+        text-align: right;
+        font-size: 66.5px;
+        line-height: 1.2;
+    }
+    .right-column-font {
+        font-family: 'Ja Jayagiri Sans', sans-serif;
+        font-size: 40px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+    .custom-font {
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.6;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    .left-column {
+        padding-right: 120px;
+    }
+    .right-column {
+        padding-left: -50px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 if selected == "Acasa":
     with st.container():
-        st.write("---") # divider
-        st.header("Teste")
-        st.write("##") # spatiu
-        left_colum, right_colum = st.columns(2)
-        with left_colum:
-            st.header("Politehnica")
-            st.write("Mate")
-            st.write("Info")
-            st.write("Fizica")
-            st.header("FMI")
-            st.write("Mate")
-            st.write("Info")
-            st.write("Fizica")
-        with right_colum:
-            st_lottie(animatie, height=350, key="Test")
+        left_column, right_column= st.columns(2)
+        with left_column:
+            st.markdown(
+                """
+                <div class="left-column" style="position: relative; height: 100%;">
+                <div class="left-font">
+                    TESTE<br>GRILE
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        with right_column:
+            st.markdown(
+                """
+                <div class="right-column" style="position: relative; height: 100%;">
+                <div class="right-column-font">
+                <br>
+                    ALL IN ONE PLACE
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        with st.container():
+            st.markdown(
+                """
+                <div class="custom-font">
+                Bac? Admitere? Fii pregătit pentru <span style="color: #00BF63;">ORICE</span>.
+                <br>
+                Punem la dispoziție <span style="color: #00BF63;">1000+</span> grile, subiecte anterioare,
+                <br>
+                materie structurată, corectură personalizată && more
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        st.write("##")
+
+        with st.container():
+            # Adjust column width ratios to bring the buttons closer to the center
+            left_column, center_column, right_column = st.columns([1, 0.2, 1])
+            with left_column:
+                st.markdown(
+                    """
+                    <div style="text-align: right; font-size: 26px"; font-family: 'Open Sans', sans-serif;">
+                        <a href="#" style="background-color: #00BF63; color: black; padding: 20px 20px; text-decoration: none; border-radius: 20px;">Try it for free</a>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            with center_column:
+                st.markdown(
+                    """
+                    <div style="text-align: center; position: relative; top: 50%; transform: translateY(-25%); font-size: 39px;">       
+                        or
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            with right_column:
+                st.markdown(
+                    """
+                    <div style="text-align: left; font-size: 26px"; font-family: 'Open Sans', sans-serif;>
+                        <a href="#" style="background-color: black; color: #00BF63; padding: 20px 20px; text-decoration: none; border-radius: 20px; border: 2px solid #00BF63;">Try it for fun</a>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
 
 elif selected == "Despre":
     with st.container():
