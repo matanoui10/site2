@@ -72,3 +72,9 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+p {
+  border-left-style: solid;
+  border-left-color: gray;
+  padding-left: 25px;
+  }
