@@ -13,7 +13,7 @@ backgroundColor = 'rgba(0, 0, 0, 0)'
 secondaryBackgroundColor = '#02081C'
 
 # Color used for almost all text
-textColor = '#00BF63'
+textColor = 'white'
 
 # Font family for all text in the app, except code blocks
 # Accepted values (serif | sans serif | monospace) 
