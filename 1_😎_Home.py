@@ -44,7 +44,6 @@ local_css("Style/style.css")
 
 animatie = load_lottieurl("https://lottie.host/73f18945-54b2-4af0-9ba6-9c34eac4abd8/yqkf5pirZN.json")
 imagine = Image.open("Images/123.jpg")
-HOME = Image.open("D:\Website\Images\HOME.png")
 
 #-------------NAVIGATION-------------
 
